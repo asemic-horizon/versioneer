@@ -65,7 +65,6 @@ get <hash> <filename> -- accesses file")
  (get (get-code conn human-hash) filename))
 
 (defmain [self &optional cmd arg1 arg2 arg3 arg4 arg5 arg6 arg7]
- ;(print [arg1 arg2 arg3 arg4 arg5 arg6 arg7])
  (with [conn (connect)]
    (setup-db conn)
    (cond [(= cmd "run")  (run-and-store db conn arg1 "./run.sh" 
