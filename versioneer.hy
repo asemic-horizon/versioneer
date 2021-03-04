@@ -1,11 +1,12 @@
-(import os [os [path listdir]] subprocess
+(require [hy.extra.anaphoric [*]])
+(import os [os [path]] subprocess
         [glob [glob]]
         [hashlib [sha1]]
         [humanhash [humanize]]
         [pprint [pprint]]
         json aiosql sqlite3)
 
-(require [hy.extra.anaphoric [*]])
+
 
 (setv db-ops "db_ops.sql"
       sql-filename "versioneer.sqlite"      
