@@ -34,5 +34,5 @@ create table versioneer (
 
 
 --name: get-output^
-    select output from versioneer where human_hash = :hash limit 1;
+    select run_comments, output from versioneer where human_hash = :hash limit 1;
 
